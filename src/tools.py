@@ -8,12 +8,12 @@ Self note: use ~/opt/miniconda3/bin/python to run project files.
 def getCredentials(useRootPath):
     loginFilePath = 'assets/login.txt' if useRootPath else '../assets/login.txt'
     try:
-        with open(loginFilePath) as file:  # Use file to refer to the file object
+        with open(loginFilePath) as file:
             username, password = tuple(file.read().split('\n'))
     except:
         username = input("Please enter your username:")
         password = input("Please enter your password:")
-        with open(loginFilePath, "w") as file:  # Use file to refer to the file object
+        with open(loginFilePath, "w") as file:
             file.write(username + '\n' + password)
             print("Saved credentials successfully")
     # print("username:'"+username+"'")
